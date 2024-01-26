@@ -4,25 +4,26 @@ import (
 	"testing"
 
 	"github.com/nandes007/leetcode/golang/exercise"
+	"github.com/nandes007/leetcode/golang/model"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestAddTwoNumbers(t *testing.T) {
 	// Helper function to convert an array to a ListNode
-	arrayToList := func(arr []int) *exercise.ListNode {
-		dummy := &exercise.ListNode{}
+	arrayToList := func(arr []int) *model.ListNode {
+		dummy := &model.ListNode{}
 		current := dummy
 		for _, val := range arr {
-			current.Next = &exercise.ListNode{Val: val}
+			current.Next = &model.ListNode{Val: val}
 			current = current.Next
 		}
 		return dummy.Next
 	}
 
 	tests := []struct {
-		l1     *exercise.ListNode
-		l2     *exercise.ListNode
-		result *exercise.ListNode
+		l1     *model.ListNode
+		l2     *model.ListNode
+		result *model.ListNode
 	}{
 		{
 			arrayToList([]int{2, 4, 3}),

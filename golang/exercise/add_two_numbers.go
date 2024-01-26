@@ -1,12 +1,9 @@
 package exercise
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/nandes007/leetcode/golang/model"
 
-func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	dummy := &ListNode{}
+func AddTwoNumbers(l1 *model.ListNode, l2 *model.ListNode) *model.ListNode {
+	dummy := &model.ListNode{}
 	current := dummy
 	carry := 0
 
@@ -22,12 +19,12 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 
 		carry = sum / 10
-		current.Next = &ListNode{Val: sum % 10}
+		current.Next = &model.ListNode{Val: sum % 10}
 		current = current.Next
 	}
 
 	if carry > 0 {
-		current.Next = &ListNode{Val: carry}
+		current.Next = &model.ListNode{Val: carry}
 	}
 
 	return dummy.Next
