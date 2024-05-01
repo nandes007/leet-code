@@ -16,14 +16,11 @@ func printLinkedList(node *model.ListNode) {
 }
 
 func main() {
-	numbers := []int{-1, -2, -3, -4, -5}
-	fmt.Print(exercise.TwoSum(numbers, -8))
+	s1 := "abcabcbb"
+	s2 := "bbbbb"
+	s3 := "pwwkew"
 
-	l1 := &model.ListNode{Val: 2, Next: &model.ListNode{Val: 4, Next: &model.ListNode{Val: 3, Next: nil}}}
-	l2 := &model.ListNode{Val: 5, Next: &model.ListNode{Val: 6, Next: &model.ListNode{Val: 4, Next: nil}}}
-	// result := exercise.AddTwoNumbers(l1, l2)
-	result := exercise.MergeTwoLists(l1, l2)
-	sorted := exercise.SortList(result)
-	printLinkedList(result)
-	printLinkedList(sorted)
+	fmt.Println("Length of longest substring without repeating characters in '"+s1+":", exercise.LengthOfLongestSubstring(s1))
+	fmt.Println("Length of longest substring without repeating characters in '"+s2+":", exercise.LengthOfLongestSubstring(s2))
+	fmt.Println("Length of longest substring without repeating characters in '"+s3+":", exercise.LengthOfLongestSubstring(s3))
 }
