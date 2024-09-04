@@ -16,11 +16,9 @@ func printLinkedList(node *model.ListNode) {
 }
 
 func main() {
-	s1 := "abcabcbb"
-	s2 := "bbbbb"
-	s3 := "pwwkew"
+	s1 := "babad"
+	s2 := "abbd"
 
-	fmt.Println("Length of longest substring without repeating characters in '"+s1+":", exercise.LengthOfLongestSubstring(s1))
-	fmt.Println("Length of longest substring without repeating characters in '"+s2+":", exercise.LengthOfLongestSubstring(s2))
-	fmt.Println("Length of longest substring without repeating characters in '"+s3+":", exercise.LengthOfLongestSubstring(s3))
+	exercise.LongestPalindrome(s1)
+	exercise.LongestPalindrome(s2)
 }
